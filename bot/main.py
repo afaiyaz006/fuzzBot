@@ -30,5 +30,6 @@ async def on_message(message):
         random_index=random.randint(1,len(motivational_quotes)-1)
         random_message=motivational_quotes[random_index]    
         await message.channel.send(random_message)
-    
-client.run(my_secret)
+
+if __name__=='__main__':  
+    client.run(my_secret)
