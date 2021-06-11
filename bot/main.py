@@ -4,7 +4,7 @@ import os
 import random
 
 client = discord.Client()
-my_secret = os.getenv("TOKEN")
+TOKEN = os.getenv("DISCORD_TOKEN")
 motivational_quotes=[""]
 
 trigger_list=("fuzz","fuzzy","feeling down","motivation","inspire","dull")
@@ -32,4 +32,4 @@ async def on_message(message):
         await message.channel.send(random_message)
 
 if __name__=="__main__":  
-    client.run(my_secret)
+    client.run(TOKEN)
