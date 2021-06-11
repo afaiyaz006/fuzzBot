@@ -4,7 +4,7 @@ import os
 import random
 
 client = discord.Client()
-my_secret = os.environ['TOKEN']
+my_secret = os.env("TOKEN")
 motivational_quotes=[""]
 
 trigger_list=("fuzz","fuzzy","feeling down","motivation","inspire","dull")
