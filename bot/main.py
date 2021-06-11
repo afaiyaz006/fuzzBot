@@ -8,7 +8,7 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 motivational_quotes=[""]
 
 trigger_list=("fuzz","fuzzy","feeling down","motivation","inspire","dull")
-dialog_file="dialogs.txt"
+dialog_file="bot/dialogs.txt"
   
 with open(dialog_file,encoding="UTF-8") as myfile:
   text=myfile.read()
