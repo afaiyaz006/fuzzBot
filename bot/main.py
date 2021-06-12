@@ -49,11 +49,9 @@ async def on_message(message):
         mentions=[m.mention for m in message.mentions]
         if(len(mentions)>0):
           mention_list = ", ".join(mentions[:-1]) + " " + mentions[-1]
-          await message.channel.send("surprise "+mention_list)
-          await message.channel.send(await getGif("surprise"))
+          await message.channel.send("surprise "+mention_list+await getGif("surprise"))
         else:
-          await message.channel.send("surprise "+message.author.mention)
-          await message.channel.send(await getGif("surprise"))
+          await message.channel.send("surprise "+message.author.mention+await getGif("surprise"))
 
     elif "aww" in  message.content.lower() or "cute" in message.content.lower() or "gol" in message.content.lower():
         await message.channel.send(await getGif("aww"))
