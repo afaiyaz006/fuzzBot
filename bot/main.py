@@ -53,9 +53,8 @@ async def on_message(message):
         else:
           await message.channel.send("surprise "+message.author.mention)
           await message.channel.send(await getGif("surprise"))
-          
+
     if "aww" in  message.content.lower() or "cute" in message.content.lower():
-        await message.channel.send("surprise "+mention_list)
         await message.channel.send(await getGif("aww"))
         
 
