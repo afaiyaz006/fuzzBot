@@ -45,13 +45,14 @@ async def on_message(message):
         await message.add_reaction(emoji)
     
     elif("surprise" in message.content.lower()):
-        #gifUrl=await t.arandom("surprise")
         mentions=[m.mention for m in message.mentions]
         if(len(mentions)>0):
           mention_list = ", ".join(mentions[:-1]) + " " + mentions[-1]
-          await message.channel.send("surprise "+mention_list+"\n"+await getGif("surprise"))
+          await message.channel.send("surprise "+mention_list)
+          await message.channel.send(await getGif("surprise"))
         else:
-          await message.channel.send("surprise "+message.author.mention+"\n"+await getGif("surprise"))
+          await message.channel.send("surprise "+message.author.mention)
+          await message.channel.send(await getGif("surprised"))
 
     elif "aww" in  message.content.lower() or "cute" in message.content.lower() or "gol" in message.content.lower():
         await message.channel.send(await getGif("aww"))
