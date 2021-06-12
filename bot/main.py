@@ -19,8 +19,9 @@ with open(dialog_file,encoding="UTF-8") as myfile:
   text=myfile.read()
 
 motivational_quotes=text.split("\n\n")  
+
 async def getGif(msg):
-   gifUrl=await t.arandom("surprise")
+   gifUrl=await t.arandom(msg)
    return gifUrl     
 
   
