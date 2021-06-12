@@ -11,7 +11,7 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 motivational_quotes=[""]
 emoji = '\N{THUMBS UP SIGN}'
 
-trigger_list=["fuzz","fuzzy","feeling down","motivation","inspire","dull","feeling"]
+trigger_list=["fuzz","fuzzy","feeling down","motivation","inspire","dull","feeling","sad"]
 dialog_file="bot/dialogs.txt"
 
 
@@ -55,7 +55,7 @@ async def on_message(message):
           await message.channel.send("surprise "+message.author.mention)
           await message.channel.send(await getGif("surprise"))
 
-    if "aww" in  message.content.lower() or "cute" in message.content.lower():
+    if "aww" in  message.content.lower() or "cute" in message.content.lower() or "gol" in message.content.lower():
         await message.channel.send(await getGif("aww"))
         
 
