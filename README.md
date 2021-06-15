@@ -1,2 +1,2 @@
 # fuzzBot
- A simple Discord bot
+ A simple Discord bot that gives random motivational quotes.
